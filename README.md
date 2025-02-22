@@ -87,4 +87,4 @@ or `pytest -v` for the detailed output
 
 ## License
 
-This project is licensed under the MIT Licenses and provided as is [LICENSE](LICENSE).
+This project is licensed under the MIT License and provided as is [LICENSE](LICENSE).
