@@ -25,17 +25,54 @@ from pokemon_sdk import PokeAPI
 
 ### Methods
 
-`get_pokemon(args?)`: retrieves data about pokemon. If no arguments are passed, it will return ALL pokemon. Pass `id` or `name` to retrieve data about a specific pokemon.
+1. `get_pokemon(args?)`: retrieves data about pokemon. If no arguments are passed, it will return ALL pokemon. Pass `id` or `name` to retrieve data about a specific pokemon.
 
-- `args`
-  - `id?`: retrieve pokemon by unique ID, optional
-  - `name?`: retrieve pokemon by name, optional
+   - `args`
+     - `id?`: retrieve pokemon by unique ID, optional
+     - `name?`: retrieve pokemon by name, optional
 
-`get_generaion(args?)`: retrieves data about pokemon generations. If no arguments are passed, it will return ALL generations. Pass `id` or `name` to retrieve data about a specific pokemon.
+2. `get_generaion(args?)`: retrieves data about pokemon generations. If no arguments are passed, it will return ALL generations. Pass `id` or `name` to retrieve data about a specific pokemon.
 
-- `args`
-  - `id?`: retrieves generation by unique ID, optional
-  - `name`: retrieves generation by name, optional
+   - `args`
+     - `id?`: retrieves generation by unique ID, optional
+     - `name?`: retrieves generation by name, optional
+
+### Response Properties
+
+Response objects can be further explored using these fields
+
+- Response to `get_pokemon({id or name})`
+  - `.id`: int
+  - `.name`: str
+  - `.height`: int
+  - `.is_default`: bool
+  - `.order`: int
+  - `.weight`: int
+  - `.abilities`: list
+  - `.forms`: list
+  - `.game_indices`: list
+  - `.held_items`: list
+  - `.location_area_encounters`: str
+  - `.moves`: list
+  - `.past_types`: list
+  - `.sprites`: dict
+  - `.cries`: dict
+  - `.species`: dict
+  - `.stats`: list
+  - `.types`: list
+- Response to `get_generation({id or name})`
+  - `.id`: int
+  - `.name`: str
+  - `.abilities`: list
+  - `.names`: list
+  - `.main_region`: dict
+  - `.moves`: list
+  - `.pokemon_specieis`
+  - `.types`
+  - `.version_groups`
+- Response to `get_pokemon()` or `get_generation()` - no arguments
+  - `.count`: int
+  - `.results`: list
 
 ## Examples
 
