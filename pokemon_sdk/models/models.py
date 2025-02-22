@@ -39,3 +39,7 @@ class Pagination(BaseModel):
     next: Optional[str]
     previous: Optional[str]
     results: List[Dict[str, Any]]
+
+class PaginationResults(BaseModel):
+    count: int
+    results: List[Dict[str, str]]

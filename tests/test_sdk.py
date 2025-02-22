@@ -1,6 +1,6 @@
 import pytest
-from ..models import Pokemon, Generation, Pagination
-from ..client import PokeAPI
+from pokemon_sdk.models.models import Pokemon, Generation, PaginationResults
+from pokemon_sdk.client import PokeAPI
 
 
 client = PokeAPI()
@@ -22,8 +22,8 @@ def test_pokemon_id_str():
 
 def test_pokemon_all():
     pokemon_all = client.get_pokemon()
-    assert isinstance(pokemon_all, list)
-    assert isinstance(pokemon_all[0], dict)
+    assert isinstance(pokemon_all, PaginationResults)
+    assert isinstance(pokemon_all.count, int)
 
 def test_pokemon_fake(): 
     fake_pokemon = client.get_pokemon('taco')
@@ -46,8 +46,8 @@ def test_generation_id_str():
 
 def test_generation_all():
     generation_all = client.get_generation()
-    assert isinstance(generation_all, list)
-    assert isinstance(generation_all[0], dict)
+    assert isinstance(generation_all, PaginationResults)
+    assert isinstance(generation_all.count, int)
 
 def test_generation_fake():
     fake_generation = client.get_generation('taco')
