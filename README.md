@@ -73,7 +73,19 @@ bulbasaur's moves:
 
 ## Testing
 
-Testing is included with [pytest](https://docs.pytest.org/en/stable/) and test script included in `tests/test_sdk.py`. In the root directory run
+Testing is included in the repo with [pytest](https://docs.pytest.org/en/stable/) and test script included in `tests/test_sdk.py`. Testing is not however included in the package via PIP. To run the integrations tests, clone the repo.
+
+```
+git clone https://github.com/PandaBacon21/pokeSDK.git
+```
+
+Once cloned, `cd` into that directory and install dependencies
+
+```
+pip install -r requirements.txt
+```
+
+In the root directory run
 
 ```
 pytest
