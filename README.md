@@ -79,7 +79,7 @@ Testing is included in the repo with [pytest](https://docs.pytest.org/en/stable/
 git clone https://github.com/PandaBacon21/pokeSDK.git
 ```
 
-Once cloned, `cd` into that directory and install dependencies
+Once cloned, `cd` into that directory and install dependencies (again, I recommend using a virtual environment)
 
 ```
 pip install -r requirements.txt
