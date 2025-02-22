@@ -23,6 +23,20 @@ pip install git+https://github.com/PandaBacon21/pokeSDK.git
 from pokemon_sdk import PokeAPI
 ```
 
+### Methods
+
+`get_pokemon(args?)`: retrieves data about pokemon. If no arguments are passed, it will return ALL pokemon. Pass `id` or `name` to retrieve data about a specific pokemon.
+
+- `args`
+  - `id?`: retrieve pokemon by unique ID, optional
+  - `name?`: retrieve pokemon by name, optional
+
+`get_generaion(args?)`: retrieves data about pokemon generations. If no arguments are passed, it will return ALL generations. Pass `id` or `name` to retrieve data about a specific pokemon.
+
+- `args`
+  - `id?`: retrieves generation by unique ID, optional
+  - `name`: retrieves generation by name, optional
+
 ## Examples
 
 ### 1. List the number of Generations
