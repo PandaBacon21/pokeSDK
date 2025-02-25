@@ -1,4 +1,5 @@
 import requests
+from tqdm import tqdm 
 from .models.models import Pokemon, Generation, Pagination, PaginationResults
 
 BASE_URL = 'https://pokeapi.co/api/v2'
@@ -72,14 +73,21 @@ class PokeAPI:
                 data = res.json()
                 validated_data = model(**data)
                 results.extend(validated_data.results)
-                count = validated_data.count
+                
+                if count == 0: 
+                    count = validated_data.count
+                    progress = tqdm(total=count, desc=f'fetching {endpoint}...', unit='items')
+                progress.update(len(validated_data.results))
+
                 full_url = validated_data.next
             except requests.RequestException as e:
                 print(f'Error retrieving {endpoint}: {e}')
                 return None
             except ValueError as e: 
                 print(f'Data Validation error: {e}')
-                return None 
+                return None
+             
+        progress.close()
         try: 
             validated_results = PaginationResults(results=results, count=count)
             return validated_results

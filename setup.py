@@ -18,6 +18,7 @@ setup(
         'pytest==8.3.4',
         'requests==2.32.3',
         'setuptools==75.8.0',
+        'tqdm==4.67.1',
         'typing_extensions==4.12.2',
         'urllib3==2.3.0',
     ],
