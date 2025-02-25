@@ -7,6 +7,7 @@ class PokeAPI:
     
     def __init__(self, base_url=BASE_URL): 
         '''initialize the PokeAPI instance with the base_url'''
+        
         self.base_url = base_url
     
     def get_pokemon(self, pokemon=None): 
@@ -57,6 +58,8 @@ class PokeAPI:
         return None
 
     def _fetch_paginated_data(self, endpoint, model):
+        '''utility method to actually fetch the data from the API when pagination is required'''
+
         full_url = self.base_url+endpoint
 
         results = []

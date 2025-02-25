@@ -31,7 +31,7 @@ from pokemon_sdk import PokeAPI
      - `id?`: retrieve pokemon by unique ID, optional
      - `name?`: retrieve pokemon by name, optional
 
-2. `get_generaion(args?)`: retrieves data about pokemon generations. If no arguments are passed, it will return ALL generations. Pass `id` or `name` to retrieve data about a specific pokemon.
+2. `get_generaion(args?)`: retrieves data about pokemon generations. If no arguments are passed, it will return ALL generations. Pass `id` or `name` to retrieve data about a specific generation.
 
    - `args`
      - `id?`: retrieves generation by unique ID, optional
