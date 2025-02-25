@@ -81,7 +81,7 @@ class PokeAPI:
                 print(f'Data Validation error: {e}')
                 return None 
         try: 
-            validated_results = PaginationResults(**{'results': results, 'count': count})
+            validated_results = PaginationResults(results=results, count=count)
             return validated_results
         except ValueError as e:
             print('Data Validation error: {e}')
