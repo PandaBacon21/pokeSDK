@@ -67,9 +67,9 @@ Response objects can be further explored using these fields
   - `.names`: list
   - `.main_region`: dict
   - `.moves`: list
-  - `.pokemon_specieis`
-  - `.types`
-  - `.version_groups`
+  - `.pokemon_species`: list
+  - `.types`: list
+  - `.version_groups`: list
 - Response to `get_pokemon()` or `get_generation()` - no arguments
   - `.count`: int
   - `.results`: list
